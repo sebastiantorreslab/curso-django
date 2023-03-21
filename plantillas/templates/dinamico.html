@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {#estamos escribiendo un comentario de una única línea#} {%comment%} hola
+    este es un comentario multilinea {%endcomment%}
+
+    <h1>Hola {{nombre}}, bienvenido/a a Django</h1>
+    <ul>
+      {% for category in categories %} {% if category == "code" %}
+      <li><b>{{category|upper}}</b></li>
+      {% else %}
+      <li>{{category}}</li>
+      {%endif%} {%endfor%}
+    </ul>
+
+<h5>Total categorias: {{categories|length}}</h5> 
+    <a src="#">Soy un enlace</a>
+  </body>
+  <!--Queda al descubierto al inspeccionar la página-->
+</html>
